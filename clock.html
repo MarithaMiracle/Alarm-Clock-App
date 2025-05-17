@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue Alarm Clock & Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="section time">
+            <div id="clock">00:00:00 AM</div>
+            <div id="clock2">Loading date...</div>
+        </div>
+
+        <div class="section alarm">
+            <h3>Set Alarm</h3>
+            <form>
+                <div class="form-group">
+                    <label for="alarm">Select time</label>
+                    <input type="datetime-local" id="alarm" />
+                </div>
+                <div class="buttons">
+                    <button id="alarmsubmit" type="submit">Set Alarm</button>
+                    <button id="alarmstop" type="button">Stop</button>
+                </div>
+            </form>
+            <p class="alarmAlert">No alarm set.</p>
+            <div id="alarm-clock-emoji">⏰</div>
+            <div id="ringing-clock-container" style="display: none;">
+                <img id="ringing-clock-animation" src="/Alarm-Clock-App/wake up alarm GIF - Find & Share on GIPHY.gif" alt="Ringing Alarm Clock">
+            </div>
+            <audio id="my-audio" src="/Alarm-Clock-App/generic-alarm-clock-86759.mp3" preload="auto" loop></audio>
+        </div>
+
+        <div class="section calendar" id="calendar-section">
+            <div class="calendar-header">
+                <span id="month-picker" class="month-picker">Month</span>
+                <div class="year-picker">
+                    <span id="prev-year" class="year-change">⏪</span>
+                    <span id="year">Year</span>
+                    <span id="next-year" class="year-change">⏩</span>
+                </div>
+            </div>
+            <div class="calendar-week-day">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+            <div class="month-list"></div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
